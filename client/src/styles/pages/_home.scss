@@ -1,3 +1,99 @@
+.container {
+  // padding: 2rem 0;
+  &--bg {
+    background-image: url("../../assets/images/papyrus.png");
+    height: 100vh;
+    object-fit: contain;
+  }
+}
+
 .landing {
-  font-size: 6rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__main {
+    width: 40%;
+
+    @include respond(tab-land) {
+      margin: auto;
+      margin-left: 10rem;
+    }
+    @include respond(tab-port) {
+      margin: auto;
+      width: 60%;
+    }
+
+    &--head-1 {
+      color: $color-grey-dark-1;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 1.5rem;
+      font-weight: bolder;
+
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+    }
+
+    &--head-2 {
+      color: $color-black;
+      font-size: 4rem;
+      font-weight: bold;
+
+      @include respond(tab-port) {
+        font-size: 5rem;
+      }
+      @include respond(phone) {
+        font-size: 5rem;
+      }
+    }
+
+    &--button {
+      background: linear-gradient(
+        to right,
+        $color-primary-dark,
+        $color-primary-light
+      );
+      margin-top: 5rem;
+      padding: 1.8rem 3rem;
+      color: $color-white;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      font-weight: bold;
+
+      &:hover {
+        box-shadow: 3px 3px 10px rgba($color-primary, 0.3);
+      }
+
+      @include respond(tab-port) {
+        margin-top: 7rem;
+      }
+      @include respond(phone) {
+        margin-top: 9rem;
+      }
+    }
+  }
+
+  &__image {
+    @include respond(tab-land) {
+      transform: scale(0.7);
+    }
+    @include respond(tab-port) {
+      display: none;
+    }
+    @include respond(phone) {
+      display: none;
+    }
+  }
 }

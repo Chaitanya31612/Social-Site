@@ -1,9 +1,10 @@
 import React from 'react'
+import Landing from '../components/Landing/Landing'
 
 const LandingContainer = () => {
   return (
-    <div className="landing">
-      Landing Page
+    <div className="container container--bg">
+      <Landing />
     </div>
   )
 }
