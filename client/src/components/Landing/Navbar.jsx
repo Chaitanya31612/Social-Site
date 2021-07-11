@@ -19,6 +19,9 @@ const Navbar = () => {
 
   return mobileview ? (
     <div class='navigation'>
+      <Link to="/" style={{textDecoration: 'none'}}>
+        <h1 className="navigation__logo">Social Site</h1>
+      </Link>
       <input type='checkbox' class='navigation__checkbox' id='navi-toggle' />
       <label for='navi-toggle' class='navigation__button'>
         <span class='navigation__icon'>&nbsp;</span>

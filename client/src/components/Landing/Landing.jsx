@@ -1,14 +1,19 @@
-import React, { useEffect, useState } from 'react'
-import Navbar from './Navbar'
-import { ChevronDoubleUpIcon } from '@heroicons/react/solid'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import Navbar from "./Navbar";
+import { ChevronDoubleUpIcon } from "@heroicons/react/solid";
+import { Link } from "react-router-dom";
 
-import HeroLogo from '../../assets/svgs/hero-brainstorm.svg'
-import BulbLogo from '../../assets/svgs/hero-bulb.svg'
-import Footer from './Footer'
+import HeroLogo from "../../assets/svgs/hero-brainstorm.svg";
+import BulbLogo from "../../assets/svgs/hero-bulb.svg";
+import Footer from "./Footer";
+import ServiceItem from "./ServiceItem";
+
+import ServicesData from "../../seeds/ServicesData";
+
+console.log(ServicesData);
 
 const Landing = () => {
-  const [navbar, setNavbar] = useState(false)
+  const [navbar, setNavbar] = useState(false);
 
   // change background of navbar on scroll
   useEffect(() => {
@@ -20,69 +25,93 @@ const Landing = () => {
   }, []);
 
   const scrollTop = () => {
-    setNavbar(window.scrollY >= 40)
-  }
+    setNavbar(window.scrollY >= 40);
+  };
 
   return (
     <div>
-      <a id="top"></a>
-      <div className="center-content">
-
+      <a id='top'></a>
+      <div className='center-content'>
         <Navbar />
 
         {/* Hero section */}
-        <div className="hero">
+        <div className='hero'>
           {/* heading */}
-          <div className="hero__main">
-            <p className="hero__main--head-1">Amazing team of Engineers</p>
-            <p className="hero__main--head-2">Find Solutions to all your problems in one <span className="highlight">place</span></p>
-            <Link to="/login">
-              <button className="hero__main--button">Ask your problem</button>
+          <div className='hero__main'>
+            <p className='hero__main--head-1'>Amazing team of Engineers</p>
+            <p className='hero__main--head-2'>
+              Find Solutions to all your problems in one{" "}
+              <span className='highlight'>place</span>
+            </p>
+            <Link to='/login'>
+              <button className='hero__main--button'>Ask your problem</button>
             </Link>
           </div>
           {/* image */}
-          <div className="hero__image">
-            <img src={HeroLogo} alt="hero" />
+          <div className='hero__image'>
+            <img src={HeroLogo} alt='hero' />
           </div>
         </div>
       </div>
 
+      <a id='about'></a>
       {/* About Section */}
-      <div className="about">
-        <h1 className="heading heading--primary center-content"><span className="highlight">About</span></h1>
-        <div className="about__main center-content">
-          <div className="about__main-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sint tenetur blanditiis tempora iure excepturi impedit repellendus enim nemo accusamus molestias repudiandae eaque, esse itaque provident, explicabo iusto rem ipsum.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sint tenetur blanditiis tempora iure excepturi impedit repellendus enim nemo accusamus molestias repudiandae eaque, esse itaque provident, explicabo iusto rem ipsum.
+      <div className='about'>
+        <h1 className='heading heading--primary center-content'>
+          <span className='highlight'>About</span>
+        </h1>
+        <div className='about__main center-content'>
+          <div className='about__main-content'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus sint tenetur blanditiis tempora iure excepturi
+            impedit repellendus enim nemo accusamus molestias repudiandae eaque,
+            esse itaque provident, explicabo iusto rem ipsum. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Necessitatibus sint tenetur
+            blanditiis tempora iure excepturi impedit repellendus enim nemo
+            accusamus molestias repudiandae eaque, esse itaque provident,
+            explicabo iusto rem ipsum.
           </div>
-          <div className="about__main-logo">
-            <img src={BulbLogo} alt="bulb" />
+          <div className='about__main-logo'>
+            <img src={BulbLogo} alt='bulb' />
           </div>
         </div>
       </div>
 
+      <a id='services'></a>
       {/* Services */}
-      <div style={{height:"100vh"}}></div>
-
+      <div className='services'>
+        <h1 className='heading heading--primary center-content'>
+          <span className='highlight'>Services</span>
+        </h1>
+        <div className='services__main'>
+          {ServicesData &&
+            ServicesData.map((service) => {
+              console.log(service);
+              return (
+                <ServiceItem
+                  index={service.index}
+                  name={service.name}
+                  description={service.description}
+                />
+              );
+            })}
+        </div>
+      </div>
 
       {/* Our Team */}
 
-
-
+      <a id='contact'></a>
       {/* Footer */}
       <Footer />
 
-
-        {/* for scrolling to the top */}
-        {
-          navbar && (
-            <a href="#top" className="scroll-top">
-              <ChevronDoubleUpIcon className="scroll-top--icon" />
-            </a>
-          )
-        }
+      {/* for scrolling to the top */}
+      {navbar && (
+        <a href='#top' className='scroll-top'>
+          <ChevronDoubleUpIcon className='scroll-top--icon' />
+        </a>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Landing
+export default Landing;
