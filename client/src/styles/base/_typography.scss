@@ -1,0 +1,22 @@
+.heading {
+  margin-bottom: 3rem;
+  color: $color-black;
+
+  &--primary {
+    font-size: 3.2rem;
+
+    &--white {
+      color: $color-white;
+    }
+  }
+
+  @include respond(tab-land) {
+    margin-left: 10rem;
+  }
+  @include respond(tab-port) {
+    @include center-x;
+  }
+  @include respond(phone) {
+    margin-left: 10rem;
+  }
+}

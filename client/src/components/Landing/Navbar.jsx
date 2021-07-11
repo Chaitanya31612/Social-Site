@@ -29,32 +29,49 @@ const Navbar = () => {
       <nav class='navigation__nav'>
         <ul class='navigation__list'>
           <li class='navigation__item'>
-            <a href='#' class='navigation__link'>
+            <a href='/' class='navigation__link'>
               Home
             </a>
           </li>
           <li class='navigation__item'>
-            <a href='#' class='navigation__link'>
+            <a href='#about' class='navigation__link'>
               About
             </a>
           </li>
           <li class='navigation__item'>
-            <a href='#' class='navigation__link'>
+            <a href='#services' class='navigation__link'>
               Services
             </a>
           </li>
           <li class='navigation__item'>
-            <a href='#' class='navigation__link'>
+            <a href='#team' class='navigation__link'>
               Our Team
             </a>
           </li>
           <li class='navigation__item'>
-            <a href='#' class='navigation__link'>
+            <a href='#contact' class='navigation__link'>
               Contact Us
             </a>
           </li>
+          <div className="navigation__item--auth">
+            <li class='navigation__item'>
+              <Link to="/login" class='navigation__link'>
+                Login
+              </Link>
+            </li>
+            <li class='navigation__item'>
+              <Link to="/register" class='navigation__link'>
+                Register
+              </Link>
+            </li>
+          </div>
         </ul>
       </nav>
+
+      {/* <div className="navigation__cta">
+        <Link to="/login" className="navigation__cta-login">Log In</Link>
+        <Link to="/register" className="navigation__cta-register">Try it for free</Link>
+      </div> */}
     </div>
   ) : (
       <div className={'nav'}>
@@ -64,7 +81,7 @@ const Navbar = () => {
         <nav className="nav__nav">
           <ul className="nav__list">
             <li className="nav__list-item">
-              <a className="nav__list-link" href="#home">Home</a>
+              <a className="nav__list-link" href="/">Home</a>
             </li>
             <li className="nav__list-item">
               <a className="nav__list-link" href="#about">About</a>

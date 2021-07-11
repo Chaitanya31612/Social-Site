@@ -13,6 +13,18 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin center-x {
+  position: absolute;
+  left: 35%;
+  transform: translateX(-50%);
+}
+
+@mixin center-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone
