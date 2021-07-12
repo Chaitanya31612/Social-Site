@@ -1,28 +1,31 @@
-import React, { lazy, Suspense } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
-import Preloader from "../components/Preloader/Preloader";
+import React, { lazy } from "react";
+import { Switch, Route, Redirect, useLocation } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const LandingContainer = lazy(() => import("../containers/LandingContainer"));
+const LoginContainer = lazy(() => import("../containers/auth/LoginContainer"));
+const RegisterContainer = lazy(() =>
+  import("../containers/auth/RegisterContainer")
+);
 const NotFoundContainer = lazy(() => import("../containers/NotFoundContainer"));
 
 // import { LandingContainer, NotFoundContainer } from '../containers'
 
 const AppRouter = () => {
+  let location = useLocation();
+
   return (
-    <Suspense fallback={<Preloader />}>
-      <Router>
-        <Switch>
+    <TransitionGroup>
+      <CSSTransition key={location.key} classNames='my-node' timeout={3000}>
+        <Switch location={location}>
           <Route exact path='/' component={LandingContainer} />
+          <Route exact path='/login' component={LoginContainer} />
+          <Route exact path='/register' component={RegisterContainer} />
           <Route path='/404' exact component={NotFoundContainer} />
           <Redirect to='/404' />
         </Switch>
-      </Router>
-    </Suspense>
+      </CSSTransition>
+    </TransitionGroup>
   );
 };
 

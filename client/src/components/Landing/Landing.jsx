@@ -45,7 +45,7 @@ const Landing = () => {
               <span className='highlight'>place</span>
             </p>
             <Link to='/login'>
-              <button className='button button--primary'>
+              <button className='button button--primary button--primary--small u-margin-top-medium'>
                 Ask your problem
               </button>
             </Link>

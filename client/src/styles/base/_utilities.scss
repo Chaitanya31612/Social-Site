@@ -42,6 +42,17 @@ mark {
   }
 }
 
+.gradient-text {
+  background: linear-gradient(to right, $color-blue, $color-primary 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
 .u-center-text {
   text-align: center !important;
 }
@@ -62,6 +73,10 @@ mark {
   @include respond(tab-port) {
     margin-bottom: 5rem !important;
   }
+}
+
+.u-margin-top-medium {
+  margin-top: 5rem !important;
 }
 
 .u-margin-top-big {

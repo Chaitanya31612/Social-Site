@@ -25,14 +25,17 @@ const NotFoundContainer = () => {
       <div className='notfound'>
         <img className='notfound__logo' src={NotFoundLogo} alt='' />
         <div className='notfound__content'>
-          <h1 className='heading heading--extrabig'>
+          <h1 className='heading heading--extrabig gradient-text'>
             Ohh No! That's a 404 Page.
           </h1>
           <p className='notfound__content-text'>
             The page you are looking for does not exist.
           </p>
           <Link to='/'>
-            <button className='button button--primary notfound__content-button'>
+            <button
+              className='button button--primary notfound__content-button'
+              style={{ fontSize: "1.7rem" }}
+            >
               Let me take you Home
             </button>
           </Link>

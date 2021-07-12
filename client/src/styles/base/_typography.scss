@@ -1,6 +1,6 @@
 .heading {
   margin-bottom: 2rem;
-  color: $color-black;
+  color: $color-grey-dark-4;
 
   &--primary {
     font-size: 3.2rem;
@@ -8,6 +8,10 @@
 
   &--white {
     color: $color-white;
+  }
+
+  &--big {
+    font-size: 4rem;
   }
 
   &--extrabig {

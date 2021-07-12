@@ -41,7 +41,11 @@ function FluidCard(props) {
     let divHeight = divElement.offsetHeight;
 
     function mouseDirection(e) {
-      if (window.isHome && canvasRef.current !== null) {
+      if (
+        window.isHome &&
+        canvasRef.current !== null &&
+        canvasRef.current.offsetParent !== null
+      ) {
         const canvasRightX =
           canvasRef.current.offsetParent.offsetLeft +
           canvasRef.current.offsetWidth -

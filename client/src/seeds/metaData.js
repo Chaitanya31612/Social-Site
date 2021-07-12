@@ -1,4 +1,4 @@
-export default {
+const data = {
   home: {
     title: "Social Site",
     description: "Find Solutions to all your problems in one place",
@@ -10,3 +10,5 @@ export default {
     keywords: "socialsite, 404",
   },
 };
+
+export default data;

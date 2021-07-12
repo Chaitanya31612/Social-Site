@@ -1,5 +1,7 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
+
+import Preloader from "./components/Preloader/Preloader";
 
 // components
 import { AppRouter } from "./routers";
@@ -7,10 +9,15 @@ import { AppRouter } from "./routers";
 // styles
 import "./styles/styles.scss";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppRouter />
+    <Suspense fallback={<Preloader />}>
+      <Router>
+        <AppRouter />
+      </Router>
+    </Suspense>
   </React.StrictMode>,
   document.getElementById("root")
 );
