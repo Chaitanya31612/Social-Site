@@ -1,4 +1,4 @@
-export default [
+const data = [
   {
     index: "01",
     name: "Service One",
@@ -18,3 +18,5 @@ export default [
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ametvoluptatibus sint quae expedita laudantium aliquid facilis fugiatvoluptatum eum consequatur.",
   },
 ];
+
+export default data;

@@ -2,50 +2,8 @@
 @import url("http://fonts.cdnfonts.com/css/gilroy-bold");
 @import url("http://fonts.cdnfonts.com/css/vivaldi");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-
-@font-face {
-  font-family: "Gilroy-Bold";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Gilroy-Bold"),
-    url("https://fonts.cdnfonts.com/s/16219/Gilroy-Bold.woff") format("woff");
-}
-@font-face {
-  font-family: "Gilroy-Heavy";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Gilroy-Heavy"),
-    url("https://fonts.cdnfonts.com/s/16219/Gilroy-Heavy.woff") format("woff");
-}
-@font-face {
-  font-family: "Gilroy-Light";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Gilroy-Light"),
-    url("https://fonts.cdnfonts.com/s/16219/Gilroy-Light.woff") format("woff");
-}
-@font-face {
-  font-family: "Gilroy-Medium";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Gilroy-Medium"),
-    url("https://fonts.cdnfonts.com/s/16219/Gilroy-Medium.woff") format("woff");
-}
-@font-face {
-  font-family: "Gilroy-Regular";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Gilroy-Regular"),
-    url("https://fonts.cdnfonts.com/s/16219/Gilroy-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Vivaldi";
-  font-style: italic;
-  font-weight: 400;
-  src: local("Vivaldi"),
-    url("https://fonts.cdnfonts.com/s/14715/VIVALDII.woff") format("woff");
-}
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&family=Lato:wght@300;400;700&display=swap");
 
 /* devanagari */
 @font-face {

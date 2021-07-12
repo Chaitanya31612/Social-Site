@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import ServiceItem from "./ServiceItem";
 
 import ServicesData from "../../seeds/ServicesData";
+import Team from "./Team";
 
 console.log(ServicesData);
 
@@ -30,7 +31,7 @@ const Landing = () => {
 
   return (
     <div>
-      <a id='top'></a>
+      <div id='top'></div>
       <div className='center-content'>
         <Navbar />
 
@@ -44,7 +45,9 @@ const Landing = () => {
               <span className='highlight'>place</span>
             </p>
             <Link to='/login'>
-              <button className='hero__main--button'>Ask your problem</button>
+              <button className='button button--primary'>
+                Ask your problem
+              </button>
             </Link>
           </div>
           {/* image */}
@@ -54,7 +57,7 @@ const Landing = () => {
         </div>
       </div>
 
-      <a id='about'></a>
+      <div id='about'></div>
       {/* About Section */}
       <div className='about'>
         <h1 className='heading heading--primary center-content'>
@@ -77,7 +80,7 @@ const Landing = () => {
         </div>
       </div>
 
-      <a id='services'></a>
+      <div id='services'></div>
       {/* Services */}
       <div className='services'>
         <h1 className='heading heading--primary center-content'>
@@ -99,8 +102,10 @@ const Landing = () => {
       </div>
 
       {/* Our Team */}
+      <div id='team'></div>
+      <Team />
 
-      <a id='contact'></a>
+      <div id='contact'></div>
       {/* Footer */}
       <Footer />
 

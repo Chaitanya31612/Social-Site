@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileview, setMobileview] = useState(false);
@@ -19,8 +19,8 @@ const Navbar = () => {
 
   return mobileview ? (
     <div class='navigation'>
-      <Link to="/" style={{textDecoration: 'none'}}>
-        <h1 className="navigation__logo">Social Site</h1>
+      <Link to='/' style={{ textDecoration: "none" }}>
+        <h1 className='navigation__logo'>Social Site</h1>
       </Link>
       <input type='checkbox' class='navigation__checkbox' id='navi-toggle' />
       <label for='navi-toggle' class='navigation__button'>
@@ -56,14 +56,14 @@ const Navbar = () => {
               Contact Us
             </a>
           </li>
-          <div className="navigation__item--auth">
+          <div className='navigation__item--auth'>
             <li class='navigation__item'>
-              <Link to="/login" class='navigation__link'>
+              <Link to='/login' class='navigation__link'>
                 Login
               </Link>
             </li>
             <li class='navigation__item'>
-              <Link to="/register" class='navigation__link'>
+              <Link to='/register' class='navigation__link'>
                 Register
               </Link>
             </li>
@@ -77,34 +77,48 @@ const Navbar = () => {
       </div> */}
     </div>
   ) : (
-      <div className={'nav'}>
-        <Link to="/" style={{textDecoration: 'none'}}>
-          <h1 className="nav__logo">Social Site</h1>
+    <div className={"nav"}>
+      <Link to='/' style={{ textDecoration: "none" }}>
+        <h1 className='nav__logo'>Social Site</h1>
+      </Link>
+      <nav className='nav__nav'>
+        <ul className='nav__list'>
+          <li className='nav__list-item'>
+            <a className='nav__list-link' href='/'>
+              Home
+            </a>
+          </li>
+          <li className='nav__list-item'>
+            <a className='nav__list-link' href='#about'>
+              About
+            </a>
+          </li>
+          <li className='nav__list-item'>
+            <a className='nav__list-link' href='#services'>
+              Services
+            </a>
+          </li>
+          <li className='nav__list-item'>
+            <a className='nav__list-link' href='#team'>
+              Our Team
+            </a>
+          </li>
+          <li className='nav__list-item'>
+            <a className='nav__list-link' href='#contact'>
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div className='nav__cta'>
+        <Link to='/login' className='nav__cta-login'>
+          Log In
         </Link>
-        <nav className="nav__nav">
-          <ul className="nav__list">
-            <li className="nav__list-item">
-              <a className="nav__list-link" href="/">Home</a>
-            </li>
-            <li className="nav__list-item">
-              <a className="nav__list-link" href="#about">About</a>
-            </li>
-            <li className="nav__list-item">
-              <a className="nav__list-link" href="#services">Services</a>
-            </li>
-            <li className="nav__list-item">
-              <a className="nav__list-link" href="#team">Our Team</a>
-            </li>
-            <li className="nav__list-item">
-              <a className="nav__list-link" href="#contact">Contact Us</a>
-            </li>
-          </ul>
-        </nav>
-        <div className="nav__cta">
-          <Link to="/login" className="nav__cta-login">Log In</Link>
-          <Link to="/register" className="nav__cta-register">Try it for free</Link>
-        </div>
+        <Link to='/register' className='button button--secondary'>
+          Try it for free
+        </Link>
       </div>
+    </div>
   );
 };
 export default Navbar;

@@ -57,32 +57,6 @@
         font-size: 4rem;
       }
     }
-
-    &--button {
-      background: linear-gradient(
-        to right,
-        $color-primary-dark,
-        $color-primary-light
-      );
-      margin-top: 5rem;
-      padding: 1.8rem 3rem;
-      color: $color-white;
-      border: none;
-      border-radius: 100px;
-      cursor: pointer;
-      font-weight: bold;
-
-      &:hover {
-        box-shadow: 3px 3px 10px rgba($color-primary, 0.3);
-      }
-
-      @include respond(tab-port) {
-        margin-top: 7rem;
-      }
-      @include respond(phone) {
-        margin-top: 10rem;
-      }
-    }
   }
 
   &__image {
@@ -101,7 +75,7 @@
 // About Section
 
 .about {
-  padding: 10rem 0;
+  padding: 10rem 4rem;
   height: 100vh;
   background-image: linear-gradient(
     to right bottom,
@@ -114,6 +88,10 @@
   -webkit-clip-path: polygon(0 10vh, 100% 0, 100% 85vh, 0 100%);
   clip-path: polygon(0 10vh, 100% 0, 100% 85vh, 0 100%);
 
+  @include respond(tab-land) {
+    padding-right: 2rem;
+  }
+
   &__main {
     display: flex;
     align-items: center;
@@ -121,7 +99,6 @@
 
     @include respond(tab-land) {
       margin: auto;
-      margin-left: 10rem;
     }
     @include respond(tab-port) {
       width: 80%;
@@ -164,22 +141,22 @@
 
 // services
 .services {
-  padding: 5rem 0;
+  padding: 10rem 4rem;
   &__main {
-    height: 85vh;
-
-    width: 110rem;
     margin: auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    gap: 6rem;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     font-size: $default-font-size;
+    padding: 10rem 4rem 0;
   }
 
   &__box {
     position: relative;
-    width: 32rem;
+    // width: 32rem;
     background-color: $color-white;
     padding: 100px 40px 60px;
     box-shadow: 0 15px 45px rgba($color-primary, 0.2);
