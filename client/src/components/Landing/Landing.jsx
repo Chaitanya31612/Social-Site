@@ -11,8 +11,6 @@ import ServiceItem from "./ServiceItem";
 import ServicesData from "../../seeds/ServicesData";
 import Team from "./Team";
 
-console.log(ServicesData);
-
 const Landing = () => {
   const [navbar, setNavbar] = useState(false);
 
@@ -89,9 +87,9 @@ const Landing = () => {
         <div className='services__main'>
           {ServicesData &&
             ServicesData.map((service) => {
-              console.log(service);
               return (
                 <ServiceItem
+                  key={service.index}
                   index={service.index}
                   name={service.name}
                   description={service.description}

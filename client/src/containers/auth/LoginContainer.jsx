@@ -9,7 +9,10 @@ import { useRouter } from "../../utils/useRouter";
 const LoginContainer = () => {
   const router = useRouter();
 
+  // console.log(process.env.REACT_APP_GOOGLE_CLIENT_ID);
+
   const responseGoogle = async (res) => {
+    console.log(res);
     // try {
     //   let response = await axios.post(
     //     "/api/users/google",
@@ -85,7 +88,7 @@ const LoginContainer = () => {
               id='email'
               required
             />
-            <label for='email' className='form__label'>
+            <label htmlFor='email' className='form__label'>
               Email
             </label>
           </div>
@@ -97,7 +100,7 @@ const LoginContainer = () => {
               id='password'
               required
             />
-            <label for='password' className='form__label'>
+            <label htmlFor='password' className='form__label'>
               Password
             </label>
           </div>

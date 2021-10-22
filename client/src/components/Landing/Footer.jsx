@@ -25,7 +25,7 @@ const Footer = () => {
                 id='name'
                 required
               />
-              <label for='name' className='form__label'>
+              <label htmlFor='name' className='form__label'>
                 Full Name
               </label>
             </div>
@@ -38,7 +38,7 @@ const Footer = () => {
                 id='email'
                 required
               />
-              <label for='email' className='form__label'>
+              <label htmlFor='email' className='form__label'>
                 Email address
               </label>
             </div>
@@ -50,7 +50,7 @@ const Footer = () => {
                 rows='2'
                 placeholder='Enter your Query'
               ></textarea>
-              <label for='contact-message' className='form__label'>
+              <label htmlFor='contact-message' className='form__label'>
                 Your Query
               </label>
             </div>
